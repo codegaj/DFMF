@@ -1,6 +1,7 @@
 #image registration and blur kernel learning
 
 (1) Download GF5-GF1-HHK.zip from https://pan.baidu.com/s/1KOiKHKXxeiYEnBrObf1rMg?pwd=dfmf, and unzip them to  "./GF5-GF1/"
+
 (2) Run reg_GF5_GF1.py, then check if there are A.npy, B.npy, C.npy, R.npy, reg_pan.npy, and reg_msi.npy in "./reg_results/"
 
 #image fusion
@@ -11,13 +12,19 @@
 
 (1) If you only need the registered HSI and MSI for evaluating the HSI fusion performance of your methods, you can also download an advanced
 version of the registered images at https://pan.baidu.com/s/1m1e0Nf7alBeEERezHeGDnA?pwd=dfmf, which are obtained by a few latest algorithm improvements and can be better suited for fusion tasks.
+
 --A.npy and B.npy: two mapping matrix
+
 --C.npy: spatial kernel
+
 --R.npy: spectral kernel
+
 --reg_msi.npy: registered hsi
+
 --reg_pan.npy: registered msi
 
 (2) The reg_GF5_GF1.py can occasionally crash due to excessive initial gradients.
+
 (3) If you have downloading troubles about the above-mentioned links, please email me: anjing_guo@hnu.edu.cn.
 
 #Device
