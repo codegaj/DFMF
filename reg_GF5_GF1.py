@@ -207,11 +207,15 @@ for i in range(epoch):
     if i == epoch-1:
         spek, spak, sigma, _, __, ___, mapm, mapa = f1([train_lrhs_all[(j-2)*bs:(j-1)*bs, ...], train_hrms_all[(j-2)*bs:(j-1)*bs, ...]])
         
+        save_dir='./reg_results/'
+        if not os.path.isdir(save_dir):
+            os.makedirs(save_dir)
+        
         print('sigma: ', sigma[0])
-        np.save('./reg_results/C', spak)
-        np.save('./reg_results/R', spek)
-        np.save('./reg_results/A', mapm)
-        np.save('./reg_results/B', mapa)
+        np.save(save_dir+'C', spak)
+        np.save(save_dir+'R', spek)
+        np.save(save_dir+'A', mapm)
+        np.save(save_dir+'B', mapa)
         
         rec_size = 60
 #        rec_size = 24
@@ -233,8 +237,8 @@ for i in range(epoch):
                 rec_pan[:, ji*rec_size:ji*rec_size+rec_size, ki*rec_size:ki*rec_size+rec_size, :] = temp_hrms[:, int((60-rec_size)/2):60-int((60-rec_size)/2), int((60-rec_size)/2):60-int((60-rec_size)/2), :]
                 rec_msi[:, ji*int(rec_size/2):ji*int(rec_size/2)+int(rec_size/2), ki*int(rec_size/2):ki*int(rec_size/2)+int(rec_size/2), :] = temp[:, int((60-rec_size)/2/2):30-int((60-rec_size)/2/2), int((60-rec_size)/2/2):30-int((60-rec_size)/2/2), :]
                 
-        np.save('./reg_results/reg_pan', rec_pan[0, :, :, :])
-        np.save('./reg_results/reg_msi', rec_msi[0, :, :, :])
+        np.save(save_dir+'reg_pan', rec_pan[0, :, :, :])
+        np.save(save_dir+'reg_msi', rec_msi[0, :, :, :])
 #        
-        cv2.imwrite('./reg_results/pan_ori.tif', np.uint8(rec_pan[0,:,:,:3]*255))
-        cv2.imwrite('./reg_results/reg_msi_resize.tif', cv2.resize(np.uint8(rec_msi[0,:,:,15]*255), (rec_pan.shape[2], rec_pan.shape[1]))) 
+        cv2.imwrite(save_dir+'pan_ori.tif', np.uint8(rec_pan[0,:,:,:3]*255))
+        cv2.imwrite(save_dir+'reg_msi_resize.tif', cv2.resize(np.uint8(rec_msi[0,:,:,15]*255), (rec_pan.shape[2], rec_pan.shape[1]))) 
