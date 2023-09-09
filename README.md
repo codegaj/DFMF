@@ -38,10 +38,17 @@ ubuntu 16.04 + cuda 9.0 + python 3.6
 #packages
 
 numpy==1.16.4
+
 tensorflow-gpu==1.12.0
+
 keras==2.2.4
+
 opencv==3.4.2
+
 tqdm==4.31.1
+
 matplotlib==3.0.3
+
 scipy==0.19.1
+
 h5py==2.9.0
