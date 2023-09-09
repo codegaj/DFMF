@@ -1,14 +1,14 @@
-#image registration and blur kernel learning
+#Image registration and blur kernel learning
 
-(1) Download GF5-GF1-HHK.zip from https://pan.baidu.com/s/1KOiKHKXxeiYEnBrObf1rMg?pwd=dfmf, and unzip them to  "./GF5-GF1/"
+(1) Download GF5-GF1-HHK.zip from https://pan.baidu.com/s/1KOiKHKXxeiYEnBrObf1rMg?pwd=dfmf, and unzip them to  "./"
 
 (2) Run reg_GF5_GF1.py, then check if there are A.npy, B.npy, C.npy, R.npy, reg_pan.npy, and reg_msi.npy in "./reg_results/"
 
-#image fusion
+#Image fusion
 
 (1) Run simu_fusion.py, and the results are saved at "./fus_results/GF5_GF1/"
 
-#note
+#Note
 
 (1) If you only need the registered HSI and MSI for evaluating the HSI fusion performance of your methods, you can also download an advanced
 version of the registered images at https://pan.baidu.com/s/1m1e0Nf7alBeEERezHeGDnA?pwd=dfmf, which are obtained by a few latest algorithm improvements and can be better suited for fusion tasks.
@@ -31,11 +31,11 @@ version of the registered images at https://pan.baidu.com/s/1m1e0Nf7alBeEERezHeG
 
 Nvidia 1080ti GPU + 64GB RAM
 
-#enviroments
+#Enviroments
 
 ubuntu 16.04 + cuda 9.0 + python 3.6
 
-#packages
+#Packages
 
 numpy==1.16.4
 
