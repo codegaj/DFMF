@@ -27,6 +27,8 @@ version of the registered images at https://pan.baidu.com/s/1m1e0Nf7alBeEERezHeG
 
 (3) If you have downloading troubles about the above-mentioned links, please email me: anjing_guo@hnu.edu.cn.
 
+(4) We appreciate the original providers of the datasets, and the above dataset can only be used for academic purposes.
+
 #Device
 
 Nvidia 1080ti GPU + 64GB RAM
